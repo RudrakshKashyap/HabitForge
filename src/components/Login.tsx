@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 
-import type { ChangeEvent, FormEvent } from 'react';
+import type { ChangeEvent, FormEvent, KeyboardEvent } from 'react';
 
 // Component for a single digit input box
 const PinInput = ({ index, value, onChange, onKeyDown, setPinRef }: { 
