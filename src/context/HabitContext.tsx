@@ -40,6 +40,7 @@ export const HabitProvider = ({ children }: { children: ReactNode }) => {
   const [habits, setHabits] = useState<Habit[]>([]);
 
   // Load all habits from LocalStorage on mount
+  // * ignore the warning coming from linter, or just move the code to above useState
   useEffect(() => {
     const storedHabits = localStorage.getItem('habits');
     if (storedHabits) {

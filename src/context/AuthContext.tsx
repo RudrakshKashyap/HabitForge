@@ -14,9 +14,12 @@ interface AuthContextType {
 }
 
 // --- Context ---
+// type of AuthContext = React.Context<AuthContextType | undefined>
+// type of useContext(AuthContext) = AuthContextType | undefined
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 // --- Hook ---
+// actually no need for simple app, but easy error handling
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {

@@ -5,12 +5,13 @@ import Dashboard from './components/Dashboard';
 
 const AppContent = () => {
   const { user } = useAuth();
-  // Redirect to Dashboard after login 
+  // Redirecting to Dashboard after login 
   return user ? <Dashboard /> : <Login />;
 };
 
 function App() {
   return (
+    // every consumer component re-renders when the context value changes
     <AuthProvider>
       <HabitProvider>
         <AppContent />
